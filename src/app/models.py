@@ -1,6 +1,7 @@
+from datetime import date
+
 from tortoise import fields
 from tortoise.models import Model
-from datetime import date
 
 
 class Entry(Model):

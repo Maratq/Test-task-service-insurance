@@ -1,7 +1,7 @@
 import json
-from _decimal import Decimal
 from datetime import date
 
+from _decimal import Decimal
 from fastapi import APIRouter, HTTPException
 from pydantic import ValidationError
 
@@ -12,12 +12,10 @@ router = APIRouter()
 
 @router.post("/calculate_insurance")
 async def calculate_insurance(cargo_type: str, declared_value: Decimal, date: str):
-    # Retrieve the cargo rate from the database
     cargo = await Entry.filter(cargo_type=cargo_type).first()
     if not cargo:
         raise HTTPException(status_code=404, detail="Cargo type not found")
 
-    # Calculate the insurance cost
     insurance_cost = declared_value * cargo.rate
 
     return {"insurance_cost": insurance_cost}

@@ -1,7 +1,6 @@
-from typing import Dict, List
+from decimal import Decimal
 
 from pydantic import BaseModel, Field
-from decimal import Decimal
 
 
 class Entries(BaseModel):
