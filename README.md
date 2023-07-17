@@ -3,10 +3,10 @@
 Тестовое задание - REST API сервис для расчета стоимости страхования грузов.
 
 # Технологии
-FastAPI
-Tortoise ORM
-Postgresql
-Docker
+## FastAPI
+## Tortoise ORM
+## Postgresql
+## Docker
 
 Тариф загружается из файла tariff.json
 содержимое файла 
