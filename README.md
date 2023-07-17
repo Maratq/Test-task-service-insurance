@@ -2,15 +2,41 @@
 
 Тестовое задание - REST API сервис для расчета стоимости страхования грузов.
 
-*Технологии*
+# Технологии
 FastAPI
 Tortoise ORM
 Postgresql
 Docker
 
-*Инструкция*
+Тариф загружается из файла tariff.json
+содержимое файла 
+```{
+    "2020-06-01": [
+        {
+            "cargo_type": "Glass",
+            "rate": "0.04"
+        },
+        {
+            "cargo_type": "Other",
+            "rate": "0.01"
+        }
+    ],
+    "2020-07-01": [
+        {
+            "cargo_type": "Glass",
+            "rate": "0.04"
+        },
+        {
+            "cargo_type": "Other",
+            "rate": "0.015"
+        }
+    ]
+}
+```
+# Инструкция
+
 Для того чтобы запустить проект нужно клонировать репозиторий на ваш локальный компьютер. Используя команду:
-https://github.com/Maratq/Test-task-service-insurance.git
+```git clone https://github.com/Maratq/Test-task-service-insurance.git```
 
 Для локального тестирования необходимо создать виртуальное окружение командой bash ```python3 -m venv venv``` и активировать его. Команда ```venv\Scripts\activate.bat``` - для Windows; ```source venv/bin/activate``` - для Linux и MacOS.
 
